@@ -35,7 +35,7 @@ resource "volterra_app_firewall" "af" {
     #{"message": "Blocked by App Firewall"}
     response_code = "BadRequest"
   }
-  blocking = true
+  blocking = false
 }
 
 resource "volterra_http_loadbalancer" "lb" {
