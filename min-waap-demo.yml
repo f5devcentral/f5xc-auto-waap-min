@@ -1,0 +1,158 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/user/Repos/f5xc-auto-waap-min
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 157
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  #frameDelay: 750
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Enable Blocking Example
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 24
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 6835
+    content: "\e(B\e[m"
+  - delay: 113
+    content: "\e[?1034h\e]0;f5xc-auto-waap-min\a\e[1m\r\r\n\e[38;5;166muser\e[97m at \e[38;5;136mMBP\e[97m in \e[38;5;64m~/Repos/f5xc-auto-waap-min\e[97m on \e[38;5;61mmain\e[38;5;33m\r\r\n\e[97m$ \e(B\e[m"
+  - delay: 3617
+    content: sed -i '' -e 's/blocking=false/blocking=true/' infra.tf
+  - delay: 1525
+    content: "\r\n"
+  - delay: 8
+    content: "\e]7;file://MBP/Users/user/Repos/f5xc-auto-waap-min\a"
+  - delay: 114
+    content: "\e]0;f5xc-auto-waap-min\a\e[1m\r\r\n\e[38;5;166muser\e[97m at \e[38;5;136mMBP\e[97m in \e[38;5;64m~/Repos/f5xc-auto-waap-min\e[97m on \e[38;5;61mmain\e[38;5;33m [!]\r\r\n\e[97m$ \e(B\e[m"
+  - delay: 7141
+    content: git commit infra.tf -m "min-waap example" && git push -u origin main
+  - delay: 706
+    content: "\r\n"
+  - delay: 29
+    content: "[main 69e1c5a] min-waap example\r\n 1 file changed, 1 insertion(+), 1 deletion(-)\r\n"
+  - delay: 403
+    content: "Enumerating objects: 5, done.\r\nCounting objects:  20% (1/5)\rCounting objects:  40% (2/5)\rCounting objects:  60% (3/5)\rCounting objects:  80% (4/5)\rCounting objects: 100% (5/5)\rCounting objects: 100% (5/5), done.\r\nDelta compression using up to 12 threads\r\nCompressing objects:  33% (1/3)\rCompressing objects:  66% (2/3)\rCompressing objects: 100% (3/3)\rCompressing objects: 100% (3/3), done.\r\nWriting objects:  33% (1/3)\rWriting objects:  66% (2/3)\rWriting objects: 100% (3/3)\rWriting objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.\r\nTotal 3 (delta 2), reused 0 (delta 0)\r\n"
+  - delay: 138
+    content: "remote: Resolving deltas:   0% (0/2)\e[K\rremote: Resolving deltas:  50% (1/2)\e[K\rremote: Resolving deltas: 100% (2/2)\e[K\rremote: Resolving deltas: 100% (2/2), completed with 2 local objects.\e[K\r\n"
+  - delay: 312
+    content: "To https://github.com/f5devcentral/f5xc-auto-waap-min.git\r\n   b7b3911..69e1c5a  main -> main\r\nBranch 'main' set up to track remote branch 'main' from 'origin'.\r\n"
+  - delay: 7
+    content: "\e]7;file://MBP/Users/user/Repos/f5xc-auto-waap-min\a"
+  - delay: 124
+    content: "\e]0;f5xc-auto-waap-min\a\e[1m\r\r\n\e[38;5;166muser\e[97m at \e[38;5;136mMBP\e[97m in \e[38;5;64m~/Repos/f5xc-auto-waap-min\e[97m on \e[38;5;61mmain\e[38;5;33m\r\r\n\e[97m$ \e(B\e[m"
+  - delay: 4099
+    content: >-
+      watch -n 5 curl -s
+      "https://min-waap.gsa.f5demos.com/get/?cmd=cat%20/etc/passwd | jq ."
+  - delay: 355
+    content: "\r\n"
+  - delay: 556
+    content: "\e[?1049h\e[22;0;0t\e[1;37r\e(B\e[m\e[4l\e[?7h\e[H\e[2JEvery 5.0s: curl -s https://min-waap.gsa.f5demos.com/get/?cmd=cat%20/etc/passwd | jq .\e[1;113HMBP: Fri Apr 22 17:01:30 2022\e[3;1H{\e[4d \"args\": {\e[5;5H\"cmd\": \"cat /etc/passwd\"\e[6;3H},\e[7d\b\b\"headers\": {\e[8;5H\"x-forwarded-proto\": \"https\",\e[9;5H\"x-forwarded-port\": \"443\",\e[10;5H\"host\": \"postman-echo.com\",\e[11;5H\"x-amzn-trace-id\": \"Root=1-626317ab-019a1d1f01391a3d220f6a68\",\e[12;5H\"content-length\": \"0\",\e[13;5H\"user-agent\": \"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)\",\e[14;5H\"accept\": \"*/*\",\e[15;5H\"referer\": \"\",\e[16;5H\"x-envoy-external-address\": \"195.252.198.82\",\e[17;5H\"x-request-id\": \"263dbf87-4114-4adf-95af-f92cc55e854d\"\e[18;3H},\e[19d\b\b\"url\": \"https://postman-echo.com/get/?cmd=cat%20/etc/passwd\"\r\e[20d}\e[37;153H"
+  - delay: 5535
+    content: "\e[1;148H6\e[11;38Hb0-7982e6f01db85dfb366b2d63\e[17;22H9d6eca1c-fa6d-404a-af8c-658a5c1c1857\e[37;153H"
+  - delay: 5539
+    content: "\e[1;145H2:04\e[11;39Hc-364ee1811101c1973fead911\e[17;22Hb89e9f63-ecd7-4e10-84e1-3e4f6e6f29de\e[37;153H"
+  - delay: 5580
+    content: "\r\e[4d\e[15M\e[1;148H9\e[4;4Hmessage\": \"Blocked by App Firewall\"\e[K\e[37;153H"
+  - delay: 5419
+    content: "\e[1;147H15\e[37;153H"
