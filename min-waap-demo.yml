@@ -80,7 +80,7 @@ config:
   fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
   
   # The size of the font
-  fontSize: 24
+  fontSize: 32
   
   # The height of lines
   lineHeight: 1
